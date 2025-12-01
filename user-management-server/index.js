@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require('cors');
 const app = express();
 const port = process.env.PORT || 4000;
 
@@ -6,6 +7,8 @@ app.get('/', (req, res) => {
     res.send('user server is available');
 })
 
+
+app.use(cors());
 
 const users = [
     {id: 1, name: 'jubair', email: 'mjhshikder.dhaka@gmail.com'},
